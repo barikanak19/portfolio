@@ -1,3 +1,4 @@
+
 {
   "name": "kanak-portfolio",
   "private": true,
@@ -15,10 +16,5 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "vite": "^5.4.11"
-  },
-  "overrides": {
-    "vite": {
-      "rollup": "npm:@rollup/wasm-node@^4"
-    }
   }
 }
