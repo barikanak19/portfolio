@@ -52,6 +52,9 @@ function Hero() {
           <Letters text="Kanak" />
           <Letters text="Bari" offset={5} />
         </h1>
+        <a className="btn primary resume-btn" href={DATA.resume} download>
+          Download Resume
+        </a>
         <p className="role">Full-stack developer, MERN</p>
         <p className="lead">I build usable web applications from idea to deployment, and enjoy finding a smarter way to build them.</p>
         <div className="cta">
@@ -178,11 +181,50 @@ function Projects() {
 }
 
 function Education() {
+  const { education } = DATA;
   return (
     <Section id="education" title="Education">
       <Reveal className="edu">
-        <h3>Bachelor of Science in Information Technology</h3>
-        <p className="meta">Sonopant Dandekar Shikshan Mandali College, University of Mumbai · 2024 – 2027 (expected)</p>
+        <div className="edu-header">
+          <div>
+            <h3>{education.program}</h3>
+            <p className="meta">{education.college} · {education.period}</p>
+          </div>
+          <div className="edu-tag">Result: {education.overall.result}</div>
+        </div>
+
+        <div className="edu-summary">
+          <div>
+            <span>Overall CGPA</span>
+            <strong>{education.overall.cgp}</strong>
+          </div>
+          <div>
+            <span>Overall Grade</span>
+            <strong>{education.overall.grade}</strong>
+          </div>
+          <div>
+            <span>Overall %</span>
+            <strong>{education.overall.percentage}</strong>
+          </div>
+          <div>
+            <span>Credits</span>
+            <strong>{education.overall.credits}</strong>
+          </div>
+        </div>
+
+        <div className="semester-grid">
+          {education.semesters.map((item) => (
+            <article key={item.sem} className="semester-card">
+              <h4>{item.sem}</h4>
+              <div className="semester-metrics">
+                <div><span>Credits</span><strong>{item.credits}</strong></div>
+                <div><span>SGPA</span><strong>{item.sgpa}</strong></div>
+                <div><span>Grade</span><strong>{item.grade}</strong></div>
+                <div><span>%</span><strong>{item.percentage}</strong></div>
+              </div>
+            </article>
+          ))}
+        </div>
       </Reveal>
     </Section>
   );
@@ -192,7 +234,7 @@ function Contact() {
   return (
     <Section id="contact" title="Let’s build something">
       <Reveal className="contact">
-        <a className="big" href={`mailto:${DATA.email}`}>{DATA.email}</a>
+        <a className="email-link" href={`mailto:${DATA.email}`}>{DATA.email}</a>
         <div className="cta">
           <a className="btn primary" href="tel:+917249415485">{DATA.phone}</a>
           <a className="btn" href={DATA.links.linkedin}>LinkedIn</a>
@@ -210,7 +252,7 @@ export default function App() {
       <main>
         <Hero /><About /><ProfileLinks /><Skills /><Experience /><Projects /><Education /><Contact />
       </main>
-      <footer><div className="wrap">© 2026 Kanak Bari. Built with React.</div></footer>
+      <footer><div className="wrap">Crafted By Kanak Bari © 2026.</div></footer>
     </>
   );
 }

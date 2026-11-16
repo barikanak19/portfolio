@@ -2,6 +2,7 @@
 export const DATA = {
   email: "barikanak19@gmail.com",
   phone: "+91 7249415485",
+  resume: "/DEVELOPER_KANAK_BARI.pdf",
   links: {
     linkedin: "https://www.linkedin.com/in/barikanak19/",
     github: "https://github.com/barikanak19/",
@@ -41,4 +42,22 @@ export const DATA = {
       d: "A full-stack CRM for managing customer queries and support tickets, with a central admin panel.",
       p: ["Secure registration, login, JWT authentication and protected routes", "Ticket creation, search, filtering, status updates and detail views", "Ticket ownership so users only see their own tickets", "Admin panel for centralized ticket management", "Admin session management with controlled access, logout and activity tracking"] },
   ],
+  education: {
+    program: "Bachelor of Science in Information Technology",
+    college: "Sonopant Dandekar Arts, V. S. Apte Commerce & M. H. Mehta Science College, Palghar",
+    period: "2024 – 2027 (expected)",
+    overall: {
+      credits: 88,
+      cgp: "7.75",
+      grade: "A+",
+      percentage: "72.14%",
+      result: "Pass",
+    },
+    semesters: [
+      { sem: "Semester I", credits: 22, percentage: "60.91", grade: "B+", sgpa: "6.36" },
+      { sem: "Semester II", credits: 22, percentage: "73.82", grade: "A+", sgpa: "8.09" },
+      { sem: "Semester III", credits: 22, percentage: "74.18", grade: "A+", sgpa: "8.00" },
+      { sem: "Semester IV", credits: 22, percentage: "79.64", grade: "A+", sgpa: "8.54" },
+    ],
+  },
 };
