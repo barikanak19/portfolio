@@ -52,7 +52,7 @@ function Hero() {
           <Letters text="Kanak" />
           <Letters text="Bari" offset={5} />
         </h1>
-        <a className="btn primary resume-btn" href={DATA.resume} download>
+        <a className="btn primary resume-btn" href={DATA.resume} download="Kanak_Bari_Resume.pdf">
           Download Resume
         </a>
         <p className="role">Full-stack developer, MERN</p>
