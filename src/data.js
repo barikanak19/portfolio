@@ -35,10 +35,10 @@ export const DATA = {
       p: ["Developed responsive web projects using HTML, CSS, JavaScript and React.js.", "Built simple web applications to strengthen frontend skills."] },
   ],
   projects: [
-    { n: "Inventory Management System", s: ["Angular", "Node.js", "Express.js", "MySQL"], live: "https://inventory-management-systemims.vercel.app/", github: "#",
+    { n: "Inventory Management System", s: ["Angular", "Node.js", "Express.js", "MySQL"], live: "https://inventory-management-systemims.vercel.app/", github: "https://github.com/barikanak19/Inventory-Management-System",
       d: "A full-stack app with a dashboard, user management and inventory monitoring, deployed on Vercel, Render and Railway.",
       p: ["Admin panel with dashboard, user management and inventory monitoring", "User-wise categories and products with secure data ownership", "JWT authentication with separate User and Admin access", "CRUD, search, filtering, sorting, pagination and bulk product upload", "CSV/XLSX reporting"] },
-    { n: "Customer Support Ticket CRM", s: ["React.js", "Node.js", "Express.js", "MySQL"], live: "https://customer-ticket-crm.vercel.app/login", github: "#",
+    { n: "Customer Support Ticket CRM", s: ["React.js", "Node.js", "Express.js", "MySQL"], live: "https://customer-ticket-crm.vercel.app/login", github: "https://github.com/barikanak19/customer-support-ticket-crm",
       d: "A full-stack CRM for managing customer queries and support tickets, with a central admin panel.",
       p: ["Secure registration, login, JWT authentication and protected routes", "Ticket creation, search, filtering, status updates and detail views", "Ticket ownership so users only see their own tickets", "Admin panel for centralized ticket management", "Admin session management with controlled access, logout and activity tracking"] },
   ],
