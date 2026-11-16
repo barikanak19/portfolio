@@ -252,7 +252,7 @@ export default function App() {
       <main>
         <Hero /><About /><ProfileLinks /><Skills /><Experience /><Projects /><Education /><Contact />
       </main>
-      <footer><div className="wrap">Crafted By Kanak Bari © 2026.</div></footer>
+      <footer><div className="wrap">Crafted By Kanak Bari © 2026</div></footer>
     </>
   );
 }
