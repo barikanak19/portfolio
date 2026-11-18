@@ -119,15 +119,31 @@ function ProfileLinks() {
 }
 
 function Skills() {
+  const startRed = [254, 202, 202];
+  const endRed = [248, 113, 113];
+
+  const skillRed = (index, categoryLength) => {
+    const progress = index / Math.max(categoryLength - 1, 1);
+    const channels = startRed.map((start, channel) =>
+      Math.round(start + (endRed[channel] - start) * progress)
+    );
+    return `rgb(${channels.join(",")})`;
+  };
+
   return (
     <Section id="skills" title="Skills">
       <Reveal className="skills">
-        {DATA.skills.map(([group, list]) => (
-          <div key={group}>
-            <h3>{group}</h3>
-            <div className="chips">{list.map((s) => <span className="chip" key={s}>{s}</span>)}</div>
-          </div>
-        ))}
+        {DATA.skills.map(([group, list]) => {
+          let skillIndex = 0;
+          return (
+            <div key={group}>
+              <h3>{group}</h3>
+              <div className="chips">{list.map((s) => (
+                <span className="chip" key={s} style={{ "--chip-bg": skillRed(skillIndex++, list.length) }}>{s}</span>
+              ))}</div>
+            </div>
+          );
+        })}
       </Reveal>
     </Section>
   );
