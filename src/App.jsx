@@ -26,7 +26,7 @@ function Letters({ text, offset = 0 }) {
 
 function Nav() {
   const [open, setOpen] = useState(false);
-  const items = [["about", "About"], ["skills", "Skills"], ["experience", "Experience"], ["projects", "Projects"], ["contact", "Contact"]];
+  const items = [["skills", "Skills"], ["experience", "Experience"], ["projects", "Projects"], ["contact", "Contact"]];
   return (
     <header className="nav">
       <div className="wrap">
@@ -45,6 +45,7 @@ function Nav() {
 }
 
 function Hero() {
+  const facts = [["Based in", "Mumbai, India"], ["Studying", "B.Sc. IT, University of Mumbai"], ["Graduating", "2027"]];
   return (
     <section className="hero" id="top">
       <div className="wrap">
@@ -60,6 +61,13 @@ function Hero() {
         <div className="cta">
           <a className="btn primary" href="#projects">See my projects</a>
           <a className="btn" href="#contact">Get in touch</a>
+        </div>
+        
+        <div className="about" style={{ marginTop: "3rem" }}>
+          <p>I like building things, figuring out how they work, and making them work better. I turn ideas into real, usable applications, solve problems along the way, and keep exploring new technologies. I'm currently studying IT and building full-stack projects with authentication, admin tools and reporting.</p>
+          <ul className="facts">
+            {facts.map(([k, v]) => <li key={k}><span>{k}</span><strong>{v}</strong></li>)}
+          </ul>
         </div>
       </div>
     </section>
@@ -248,7 +256,7 @@ function Education() {
 
 function Contact() {
   return (
-    <Section id="contact" title="Let’s build something">
+    <Section id="contact" title="Let’s Connect">
       <Reveal className="contact">
         <a className="email-link" href={`mailto:${DATA.email}`}>{DATA.email}</a>
         <div className="cta">
@@ -266,7 +274,7 @@ export default function App() {
     <>
       <Nav />
       <main>
-        <Hero /><About /><ProfileLinks /><Skills /><Experience /><Projects /><Education /><Contact />
+        <Hero /><ProfileLinks /><Skills /><Experience /><Projects /><Education /><Contact />
       </main>
       <footer><div className="wrap">Crafted By Kanak Bari © 2026</div></footer>
     </>
