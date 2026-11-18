@@ -55,7 +55,7 @@ function Hero() {
         <a className="btn primary resume-btn" href={DATA.resume} download="Kanak_Bari_Resume.pdf">
           Download Resume
         </a>
-        <p className="role">Full-stack developer, MERN</p>
+        <p className="role">Full-Stack Developer, MERN</p>
         <p className="lead">I build usable web applications from idea to deployment, and enjoy finding a smarter way to build them.</p>
         <div className="cta">
           <a className="btn primary" href="#projects">See my projects</a>
