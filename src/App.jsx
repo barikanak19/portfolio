@@ -106,16 +106,6 @@ function ProfileLinks() {
             </a>
           ))}
         </div>
-        <div className="repo-list">
-          <h3>GitHub highlights</h3>
-          <ul>
-            {DATA.githubRepos.map((repo) => (
-              <li key={repo.name}>
-                <a href={repo.url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
       </Reveal>
     </Section>
   );
@@ -194,6 +184,18 @@ function Projects() {
     <Section id="projects" title="Projects">
       <Reveal className="projects">
         {DATA.projects.map((p) => <Project key={p.n} p={p} />)}
+      </Reveal>
+      <Reveal className="project-highlights">
+        <div className="repo-list">
+          <h3>GitHub highlights</h3>
+          <ul>
+            {DATA.githubRepos.map((repo) => (
+              <li key={repo.name}>
+                <a href={repo.url} target="_blank" rel="noopener noreferrer">{repo.name}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </Reveal>
     </Section>
   );
