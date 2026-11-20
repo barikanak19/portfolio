@@ -53,22 +53,17 @@ function Hero() {
           <Letters text="Kanak" />
           <Letters text="Bari" offset={5} />
         </h1>
-        <a className="btn primary resume-btn" href={DATA.resume} download="Kanak_Bari_Resume.pdf">
-          Download Resume
-        </a>
-        <p className="role">Full-Stack Developer, MERN</p>
-        <p className="lead">I build usable web applications from idea to deployment, and enjoy finding a smarter way to build them.</p>
+        <p className="role">Full-Stack Developer, MERN-Stack</p>
+        <p className="lead">I like building things, figuring out how they work, and making them work better. I turn ideas into real, usable applications, solve problems along the way, and keep exploring new technologies. I'm currently studying IT and building full-stack projects with authentication, admin tools and reporting.</p>
         <div className="cta">
-          <a className="btn primary" href="#projects">See my projects</a>
+          <a className="btn" href={DATA.resume} download="Kanak_Bari_Resume.pdf">Download Resume</a>
+          <a className="btn" href="#projects">See my projects</a>
           <a className="btn" href="#contact">Get in touch</a>
         </div>
         
-        <div className="about" style={{ marginTop: "3rem" }}>
-          <p>I like building things, figuring out how they work, and making them work better. I turn ideas into real, usable applications, solve problems along the way, and keep exploring new technologies. I'm currently studying IT and building full-stack projects with authentication, admin tools and reporting.</p>
-          <ul className="facts">
-            {facts.map(([k, v]) => <li key={k}><span>{k}</span><strong>{v}</strong></li>)}
-          </ul>
-        </div>
+        <ul className="facts" style={{ marginTop: "3rem" }}>
+          {facts.map(([k, v]) => <li key={k}><span>{k}</span><strong>{v}</strong></li>)}
+        </ul>
       </div>
     </section>
   );

@@ -39,10 +39,10 @@ nav a:hover{color:var(--ink)}
 .hero p.lead{max-width:34rem;color:var(--muted);margin:0 0 1.4rem;opacity:0;animation:fade .8s .9s forwards}
 .hero .role{opacity:0;animation:fade .8s .7s forwards}
 .hero .cta{opacity:0;animation:fade .8s 1.1s forwards}
-.hero .resume-btn{margin:0 0 0.8rem;display:inline-flex;align-items:center;justify-content:center;opacity:0;animation:fade .8s 1s forwards}
 @keyframes fade{to{opacity:1}}
 .cta{display:flex;flex-wrap:wrap;gap:.8rem}
 .btn{display:inline-block;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink);transition:transform .25s,background .25s,color .25s}
+.hero .btn{padding:.6rem 1rem;font-size:.95rem}
 .btn.primary{background:var(--blue-deep);border-color:transparent;color:var(--accent-ink);box-shadow:0 12px 28px -18px rgba(122,108,244,.9)}
 .btn:hover{transform:translateY(-3px)}
 section.block{padding:5rem 0;border-top:1px solid var(--line)}
